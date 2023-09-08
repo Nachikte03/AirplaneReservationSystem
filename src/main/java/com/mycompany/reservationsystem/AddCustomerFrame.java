@@ -333,7 +333,7 @@ public class AddCustomerFrame extends javax.swing.JInternalFrame {
             
             
             //check validity of input
-            if(firstNameString==null || lastNameString==null || passportString==null || nationalIDString==null || addressString==null || contactString==null ||genderString.length()==0 ){
+            if(firstNameString.length()==0 || lastNameString.length()==0 || passportString.length()==0 || nationalIDString.length()==0 || addressString.length()==0 || contactString.length()==0 ||genderString.length()==0 ){
                 JOptionPane.showMessageDialog(this, "Empty Details! check deatils and try again");
                 return;
             }

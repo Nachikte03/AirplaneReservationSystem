@@ -291,7 +291,7 @@ public class SearchTicketFrame extends javax.swing.JInternalFrame {
                 }
                 
                 statement = conn.prepareStatement("SELECT * FROM flight WHERE flightID = ?");
-                statement.setString(1, "FL007");
+                statement.setString(1, flightIDString);
                 result = statement.executeQuery();
                 if(result.next()){
                     departure.setText(result.getString("departure"));

@@ -91,6 +91,8 @@ public class BookTicketFrame extends javax.swing.JInternalFrame {
         jButton4 = new javax.swing.JButton();
         flightName = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        seatNumber = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
@@ -235,51 +237,61 @@ public class BookTicketFrame extends javax.swing.JInternalFrame {
 
         jLabel19.setText("Flight");
 
+        jLabel20.setText("Seats Number");
+
+        seatNumber.setBackground(new java.awt.Color(242, 242, 242));
+        seatNumber.setEnabled(false);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ticketID, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(contact, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(gender, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(fare, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(20, 20, 20)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(customerID, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton4))
-                            .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lastName, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(flightName, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ticketID, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(contact, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(gender, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fare, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(customerID, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton4))
+                                    .addComponent(firstName, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lastName, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(seatNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(flightName, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(20, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(book, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(127, 127, 127))
+                        .addGap(138, 138, 138)
+                        .addComponent(book, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -315,13 +327,17 @@ public class BookTicketFrame extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(fare, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(flightName, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(seatNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(flightName, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(book, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addGap(18, 18, 18))
         );
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -359,7 +375,7 @@ public class BookTicketFrame extends javax.swing.JInternalFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -390,17 +406,51 @@ public class BookTicketFrame extends javax.swing.JInternalFrame {
         String bookingIDString = ticketID.getText();
         String flightIDString = flightName.getText();
         String customerIDString = customerID.getText();
+        
         try {
             Class.forName("com.mysql.jdbc.Driver");
             try {
                 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/reservationsystem","root1","root1");
                 PreparedStatement statement = conn.prepareStatement("INSERT INTO booking(bookingID,customerID,flightID) VALUES (?,?,?)");
+
                 statement.setString(1, bookingIDString);
                 statement.setString(2,customerIDString);
                 statement.setString(3, flightIDString);
+
+                PreparedStatement statementForTotalSeats = conn.prepareStatement("SELECT seats FROM flight where flightId = ?");
+                statementForTotalSeats.setString(1,flightIDString);
+
+                PreparedStatement statementForBookedSeats = conn.prepareStatement("SELECT COUNT(flightId) FROM booking where flightId = ?");
+                statementForBookedSeats.setString(1,flightIDString);
+
+                ResultSet totalResult = statementForTotalSeats.executeQuery();
+                ResultSet bookedResult = statementForBookedSeats.executeQuery();
+
+                int total = 0;
+                int booked = 0;
+                if(totalResult.next()){
+                    total = Integer.parseInt(totalResult.getString(1));
+                }
+                if(bookedResult.next()){
+                    booked = Integer.parseInt(bookedResult.getString(1));
+                }
+
+                if(total<=booked){
+                    JOptionPane.showMessageDialog(this, "Flight is booked completely try another flight");
+                    return;
+                }
                 int rows = statement.executeUpdate();
-                if(rows==1){
+                if(rows>0){
                     JOptionPane.showMessageDialog(this, "Booking Successful");
+                    try{
+                    createID();
+                    }
+                    catch(ClassNotFoundException e){
+                        JOptionPane.showInternalMessageDialog(null, "class");
+                    }
+                    catch(SQLException e){
+                        JOptionPane.showInternalMessageDialog(null, "sql");
+                    }
                 }
                 else{
                     JOptionPane.showMessageDialog(this, "Error! Check your Details or try again later");
@@ -431,27 +481,52 @@ public class BookTicketFrame extends javax.swing.JInternalFrame {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/reservationsystem","root1","root1");
             PreparedStatement statement = conn.prepareStatement("SELECT * FROM flight WHERE departure = ? AND arrival =?");
             
-            
-            
             statement.setString(1, sourceString);
             statement.setString(2, destinationString);
-            ResultSet result = statement.executeQuery();
-            ResultSetMetaData data = result.getMetaData();
-            int coulumnCount = data.getColumnCount();
-            DefaultTableModel defaultTableModel = (DefaultTableModel)jTable1.getModel();
-            if(result.next()==false){
-                JOptionPane.showMessageDialog(this, "Flights not availbale for current date");
+            ResultSet rs=statement.executeQuery();
+            ResultSetMetaData RSMD=rs.getMetaData();
+            int cc=RSMD.getColumnCount();
+            DefaultTableModel DFT=(DefaultTableModel)jTable1.getModel();
+            while(rs.next()) {
+                Vector v=new Vector();
+                for(int i=1;i<=cc;i++) { 
+                    v.add(rs.getString("flightID"));
+                    v.add(rs.getString("flight_name"));
+                    v.add(rs.getString("date"));
+                    v.add(rs.getString("departure_time"));
+                    v.add(rs.getString("fare"));
+                }
+                DFT.addRow(v);
             }
-            while(result.next()){
-                String[] v = new String[5];
-                v[0] = result.getString("flightID");
-                v[1] = result.getString("flight_name");
-                v[2] = result.getString("date");
-                v[3] = result.getString("departure_time");
-                v[4] = result.getString("fare");
-                defaultTableModel.addRow(v);
-                
-            }
+            
+             //v[0] = result.getString("flightID");
+//                v[1] = result.getString("flight_name");
+//                v[2] = result.getString("date");
+//                v[3] = result.getString("departure_time");
+//                v[4] = result.getString("fare");
+            
+//            statement.setString(1, sourceString);
+//            statement.setString(2, destinationString);
+//            ResultSet result = statement.executeQuery();
+//            ResultSetMetaData data = result.getMetaData();
+//            int coulumnCount = data.getColumnCount();
+//            DefaultTableModel defaultTableModel = (DefaultTableModel)jTable1.getModel();
+//            if(result.next()==false){
+//                JOptionPane.showMessageDialog(this, "Flights not availbale for current date");
+//            }
+            //defaultTableModel.setNumRows(0);
+            
+
+//            while(result.next()){
+//                String[] v = new String[5];
+//                v[0] = result.getString("flightID");
+//                v[1] = result.getString("flight_name");
+//                v[2] = result.getString("date");
+//                v[3] = result.getString("departure_time");
+//                v[4] = result.getString("fare");
+//                defaultTableModel.addRow(v);
+//                
+//            }
             
             
         }
@@ -506,12 +581,53 @@ public class BookTicketFrame extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
-        // TODO add your handling code here:
-        int row = jTable1.getSelectedRow();
-        DefaultTableModel dtf = (DefaultTableModel)jTable1.getModel();
-        String flightIDString = jTable1.getValueAt(row,0).toString();
-        flightName.setText(jTable1.getValueAt(row, 0).toString());
-        fare.setText(jTable1.getValueAt(row, 4).toString());
+        try {
+            // TODO add your handling code here:
+            int row = jTable1.getSelectedRow();
+            DefaultTableModel dtf = (DefaultTableModel)jTable1.getModel();
+            String flightIDString = jTable1.getValueAt(row,0).toString();
+            //before setting text get the max seat number from booking table for choosen flight
+            // TODO add your handling code here:
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/reservationsystem","root1","root1");
+            PreparedStatement currCountStatement = conn.prepareStatement("SELECT Count(bookingID) as count FROM booking WHERE flightID = ?");
+            currCountStatement.setString(1, flightIDString);
+            ResultSet result = currCountStatement.executeQuery();
+            int seatNumberValue;
+            if(result.next()){
+                String currSeatNumber = result.getString("count");
+                seatNumberValue = Integer.parseInt(currSeatNumber) +1;
+            }
+            else{
+                seatNumberValue = 1;
+            }
+            PreparedStatement maxCountStatement = conn.prepareStatement("SELECT seats FROM flight WHERE flightID=?");
+            maxCountStatement.setString(1, flightIDString);
+            result = maxCountStatement.executeQuery();
+            int max = 0;
+            if(result.next()){
+                String maxCountNumber = result.getString("seats");
+                max = Integer.parseInt(maxCountNumber);
+            }
+            else{
+                JOptionPane.showMessageDialog(this,"flight not found");
+            }
+            
+            if(seatNumberValue <= max){
+                flightName.setText(jTable1.getValueAt(row, 0).toString());
+                fare.setText(jTable1.getValueAt(row, 4).toString());
+                seatNumber.setText(String.valueOf(seatNumberValue));
+            }
+            
+            else{
+                
+            }
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(BookTicketFrame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(BookTicketFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         
     }//GEN-LAST:event_jTable1MouseClicked
 
@@ -534,6 +650,7 @@ public class BookTicketFrame extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -547,6 +664,7 @@ public class BookTicketFrame extends javax.swing.JInternalFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField lastName;
     private javax.swing.JButton searchFlights;
+    private javax.swing.JTextField seatNumber;
     private javax.swing.JComboBox<String> source;
     private javax.swing.JTextField ticketID;
     // End of variables declaration//GEN-END:variables

@@ -300,7 +300,7 @@ public class AddFlightFrame extends javax.swing.JInternalFrame {
             
             
             //check validity of input
-            if(flightIDString==null || flightNameString==null || destinationString==null || fareString==null || sourceString==null || timeDepartureString==null || seatsString==null ||durationString==null ){
+            if(flightIDString.length()==0 || flightNameString.length()==0 || destinationString.length()==0 || fareString.length()==0 || sourceString.length()==0 || timeDepartureString.length()==0 || seatsString.length()==0 ||durationString.length()==0 ){
                 JOptionPane.showMessageDialog(this, "Empty Details! check deatils and try again");
                 return;
             }
